@@ -4,7 +4,7 @@ const {userAuth} = require("../middleware/auth");
 const ConnectionRequest = require("../Models/connection");
 const User = require("../Models/userModel"); 
 
-const USER_POPULATE_DATA = "firstName lastName skills gender photoUrl age";
+const USER_POPULATE_DATA = "firstName lastName  gender photoUrl age";
 
 userRoutes.get("/user/request/received",userAuth,async(req,res)=>{
     try {
@@ -51,7 +51,7 @@ userRoutes.get("/user/connections",userAuth,async(req,res)=>{
         });
 
 
-        res.json({connectionRequest});
+        res.json({data});
 
         
     } catch (error) {
